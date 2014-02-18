@@ -1,7 +1,7 @@
 Timetator
 =======
 Timetator is a jQuery-based addon for input boxes, giving them a time sanitizer.
-[You can see a demo here](http://opensource.faroemedia.com/timator).
+[You can see a demo here](http://opensource.faroemedia.com/timetator).
 
 
 Usage
