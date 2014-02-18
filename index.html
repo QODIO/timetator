@@ -12,11 +12,9 @@
 		#wrapper {
 			padding: 15px;
 		}
-		#inputTimetator1,
-		#inputTimetator2 {
-			width: 300px;
-			padding: 3px;
-			box-sizing: border-box;
+		input {
+			padding: 5px;
+			font-size: 20px;
 		}
 	</style>
 	<script src="jquery-1.11.0.min.js"></script>
@@ -25,15 +23,27 @@
 		$(function () {
 			$('#inputTimetator1').timetator();
 
-			$('#inputTimetator2').timetator();
+			$('#inputTimetator2').timetator({
+				useCap: false
+			});
+
+			$('#inputTimetator3').timetator({
+				seperator: '.',
+				useSeconds: true
+			});
 		});
 	</script>
 </head>
 <body>
 	<div id="wrapper">
+		<label>default</label><br>
 		<input id="inputTimetator1" name="inputTimetator1" value=""><br>
 		<br>
-		<input id="inputTimetator2" name="inputTimetator2" value="14:00">
+		<label>useCaps: false</label><br>
+		<input id="inputTimetator2" name="inputTimetator2" value="14:00"><br>
+		<br>
+		<label>seperator: '.' and useSeconds: true</label><br>
+		<input id="inputTimetator3" name="inputTimetator2" value="01.15">
 	</div>
 
 </body>

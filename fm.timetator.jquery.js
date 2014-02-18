@@ -43,13 +43,19 @@
 		plugin.init = function () {
 			plugin.settings = $.extend({}, defaults, options);
 			$element.bind('blur', sanitize);
+			$element.bind('mouseup', select);
+			sanitize();
 		};
 		
 		var sanitize = function () {
-			$element.val(sanitizeTime($element.val()));
+			$element.val(sanitizeTime($element.val(), plugin.settings.seperator, plugin.settings.useSeconds, plugin.settings.useCap));
 		};
 		
-		var sanitizeTime = function (time, useSeconds, useCap, seperator) {
+		var select = function () {
+			$element.select();
+		};
+		
+		var sanitizeTime = function (time, seperator, useSeconds, useCap) {
 			useSeconds = useSeconds === undefined ? false : useSeconds;
 			useCap = useCap === undefined ? true : useCap;
 			seperator = seperator === undefined ? ':' : seperator;
@@ -101,6 +107,7 @@
 		plugin.destroy = function () {
 			$.removeData(element, 'timetator');
 			$element.unbind('blur', sanitize);
+			$element.unbind('mouseup', select);
 			$element.show();
 		};
 		
