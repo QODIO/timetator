@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Timetator Plugin</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		#wrapper {
+			padding: 15px;
+		}
+		#inputTimetator1,
+		#inputTimetator2 {
+			width: 300px;
+			padding: 3px;
+			box-sizing: border-box;
+		}
+	</style>
+	<script src="jquery-1.11.0.min.js"></script>
+	<script src="fm.timetator.jquery.js"></script>
+	<script>
+		$(function () {
+			$('#inputTimetator1').timetator();
+
+			$('#inputTimetator2').timetator();
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<input id="inputTimetator1" name="inputTimetator1" value=""><br>
+		<br>
+		<input id="inputTimetator2" name="inputTimetator2" value="14:00">
+	</div>
+
+</body>
+</html>

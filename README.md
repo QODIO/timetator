@@ -1,6 +1,6 @@
 Timetator
 =======
-Datetator is a jQuery-based addon for input boxes, giving them a time sanitizer.
+Timetator is a jQuery-based addon for input boxes, giving them a time sanitizer.
 [You can see a demo here](http://opensource.faroemedia.com/timator).
 
 
@@ -22,9 +22,23 @@ $('#inputBox').timetator();
 $('#inputBox').timetator({
     seperator: ':',        // the seperator used to seperate hours, minutes and seconds
     useSeconds: false,     // if set to true, then seconds will also be used
-    useCap				   // if set to true, the time value will be capped at 23:59
+    useCap:	true		   // if set to true, the time value will be capped at 23:59
 });
 ```
+
+
+jQuery methods
+--------------
+Method             | Description
+------------------ | -----------
+destroy            | This method is used to remove the instance of the plugin from the input box.
+
+
+###### Method usage
+```javascript
+$('#inputBox').datetator('destroy');
+```
+
 
 Browser compatibility
 ---------------------
