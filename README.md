@@ -36,7 +36,7 @@ destroy            | This method is used to remove the instance of the plugin fr
 
 ###### Method usage
 ```javascript
-$('#inputBox').datetator('destroy');
+$('#inputBox').timetator('destroy');
 ```
 
 
