@@ -42,6 +42,7 @@
 		// INITIALIZE PLUGIN
 		plugin.init = function () {
 			plugin.settings = $.extend({}, defaults, options);
+			$element.addClass('timetator');
 			$element.bind('blur', sanitize);
 			$element.bind('mouseup', select);
 			sanitize();
@@ -105,6 +106,7 @@
 
 		// REMOVE PLUGIN AND REVERT INPUT ELEMENT TO ORIGINAL STATE
 		plugin.destroy = function () {
+			$element.removeClass('timetator');
 			$.removeData(element, 'timetator');
 			$element.unbind('blur', sanitize);
 			$element.unbind('mouseup', select);
