@@ -16,6 +16,10 @@ Usage
 ```javascript
 $('#inputBox').timetator();
 ```
+If you don't wan't to meddle with scripting, there is an alternative to activate replacement, by using inline markup. 
+```html
+<input type="text" class="timetator" data-timetator-use-cap="false">
+```
 
 ###### if you want to change settings:
 ```javascript

@@ -12,6 +12,11 @@
 		#wrapper {
 			padding: 15px;
 		}
+		label {
+			font-weight: bold;
+			padding-top: 16px;
+			display: block;
+		}
 		input {
 			padding: 5px;
 			font-size: 20px;
@@ -36,14 +41,18 @@
 </head>
 <body>
 	<div id="wrapper">
-		<label for="inputTimetator1">default</label><br>
-		<input id="inputTimetator1" name="inputTimetator1" value=""><br>
+		<label for="inputTimetator1">default</label>
+		<input id="inputTimetator1" value=""><br>
 		<br>
-		<label for="inputTimetator2">useCaps: false</label><br>
-		<input id="inputTimetator2" name="inputTimetator2" value="14:00"><br>
+		<label for="inputTimetator2">useCaps: false</label>
+		<input id="inputTimetator2" value="14:00"><br>
 		<br>
-		<label for="inputTimetator3">seperator: '.' and useSeconds: true</label><br>
-		<input id="inputTimetator3" name="inputTimetator2" value="01.15">
+		<label for="inputTimetator3">seperator: '.' and useSeconds: true</label>
+		<input id="inputTimetator3" value="01.15"><br>
+		<br>
+		<label for="inputTimetator4">Markup initialization</label>
+		<pre>&lt;input class=&quot;timetator&quot; value=&quot;01:15&quot; data-timetator-use-cap=&quot;false&quot;&gt;</pre>
+		<input class="timetator" id="inputTimetator4" value="01:15" data-timetator-use-cap="false"><br>
 	</div>
 
 </body>

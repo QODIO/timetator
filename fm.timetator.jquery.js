@@ -1,7 +1,7 @@
 /*
  Timetator jQuery Plugin
  Timetator is a jQuery-based addon for input boxes, giving them a time sanitizer.
- version 1.0, Jan 13th, 2014
+ version 1.1, Dec 11th, 2015
  by Ingi P. Jacobsen
 
  The MIT License (MIT)
@@ -132,5 +132,22 @@
 			}
 		});
 	};
-
 }(jQuery));
+
+$(function () {
+	$('.timetator').each(function () {
+		var $this = $(this);
+		var options = {};
+		$.each($this.data(), function (key, value) {
+			if (key.substring(0, 9) == 'timetator') {
+				var value_temp = value.toString().replace(/'/g, '"');
+				value_temp = $.parseJSON(value_temp);
+				if (typeof value_temp == 'object') {
+					value = value_temp;
+				}
+				options[key.substring(9, 10).toLowerCase() + key.substring(10)] = value;
+			}
+		});
+		$this.timetator(options);
+	});
+});
