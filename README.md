@@ -1,7 +1,7 @@
 Timetator
 =======
 Timetator is a jQuery-based addon for input boxes, giving them a time sanitizer.
-[You can see a demo here](http://opensource.faroemedia.com/timetator).
+[You can see a demo here](http://opensource.qodio.com/timetator).
 
 
 Usage
@@ -58,7 +58,7 @@ Copyright and license
 ---------------------
 The MIT License (MIT)
 
-Copyright (c) 2014 Faroe Media
+Copyright (c) 2014 Qodio
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
