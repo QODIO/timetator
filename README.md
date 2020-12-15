@@ -1,3 +1,6 @@
+DEPRECATED - no longer actively maintained
+==========================================
+
 Timetator
 =======
 Timetator is a jQuery-based addon for input boxes, giving them a time sanitizer.
